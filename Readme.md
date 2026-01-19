@@ -56,9 +56,9 @@ The configuration file supports `~` which points to the home directory.
 
 ## Importing to Rekordbox
 
-1. * Open Rekordbox and go to **Preferences > Advanced > Database**.
-2. * In the **rekordbox xml** section, browse and select your generated `rekordbox.xml`.
-3. * In the Rekordbox tree view (sidebar), scroll down to the **rekordbox xml** section
-4. * Expand the node to see your exported collections.
-5. * Right-click a playlist or crate and select **Import to Collection**. This will copy the tracks and their cue points into your main Rekordbox database.
+1. Open Rekordbox and go to **Preferences > Advanced > Database**.
+2. In the **rekordbox xml** section, browse and select your generated `rekordbox.xml`.
+3. In the Rekordbox tree view (sidebar), scroll down to the **rekordbox xml** section
+4. Expand the node to see your exported collections.
+5. Right-click a playlist or crate and select **Import to Collection**. This will copy the tracks and their cue points into your main Rekordbox database.
 
