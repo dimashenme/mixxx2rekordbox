@@ -20,8 +20,15 @@ database and the output file on the command line
 mixxx2rekordbox.py ~/.mixxx/mixxxdb.sqlite -o rekordbox.xml
 ```
 or in the configuration file `.mixxx2rekordbox`, which should be
-either in the current or in the home directory. The tracks in the
-crate can be sorted by BPM during export
+either in the current or in the home directory. The mixxx settings folder 
+is normally
+- `C:\Users\<YourUsername>\AppData\Local\Mixxx\` on **Windows**
+- `~/Library/Containers/org.mixxx.mixxx/Data/Library/Application Support/Mixxx/` on **Mac**
+- `~/.mixxx/` on **Linux**
+
+but you can always check it by going to `Preferences -> Library -> Open Mixxx settigs folder`.
+
+The tracks in the crate can be sorted by BPM during export
 ```bash
 mixxx2rekordbox.py --sort-by-bpm asc
 ```
