@@ -1,0 +1,15 @@
+[default]
+# Full path to your Mixxx SQLite database
+db_path = ~/.mixxx/mixxxdb.sqlite
+
+# Default output file (supports ~)
+output_path = ~/Desktop/rekordbox.xml
+
+# Sorting preference for tracks in crates (asc, desc, or blank for no sorting)
+sort_by_bpm = asc
+
+# Comma-separated list of crates to ignore
+exclude_crates =
+
+# Default playlists to export when using '-p' without names
+default_playlists = 
