@@ -12,9 +12,9 @@ which while not perfect remains accurate enough for most purposes.
 
 # Usage
 
-By default `mixxx2rekordbox.py` will try to export all crates from
+By default `mixxx2rekordbox.py` will try to export all crates and playlists from
 mixxx into a `rekordbox.xml` file. You can specify location of the
-database and the output file on the command line
+database and the output file on the command line. First activate the virtualenv and download dependencies with requirements.txt
 
 ```bash
 mixxx2rekordbox.py ~/.mixxx/mixxxdb.sqlite -o rekordbox.xml
@@ -55,6 +55,10 @@ With
 ```bash
 mixxx2rekordbox.py -p
 ```
+the same goes for crates with
+```bash
+mixxx2rekordbox.py -c
+```
 
 With `--list-playlists` and `--list-crates` you can get lists of
 playlists and crates in your mixxx database.
@@ -68,4 +72,20 @@ The configuration file supports `~` which points to the home directory.
 3. In the Rekordbox tree view (sidebar), scroll down to the **rekordbox xml** section
 4. Expand the node to see your exported collections.
 5. Right-click a playlist or crate and select **Import to Collection**. This will copy the tracks and their cue points into your main Rekordbox database.
+
+# contributors
+
+- [M-Igashi](https://github.com/M-Igashi), the developer of [baken](https://github.com/M-Igashi/baken), has helped with several pointers in the right direction as seen in this [issue](https://github.com/dimashenme/mixxx2rekordbox/issues/7).
+He contributed code-wise by adding accurate tempo conversion from mixxx to rekordbox for Beatgrid-V2.0 and Beatmap-V1.0
+
+# notes
+
+## files
+To give context to some of the files in the repo. The mixxx.beats.proto file holds the definition of the protocol buffers that mixxx uses to store the beats of a track, which are used in this
+program to create the "TEMPO" xml tag use to generate the beatgrid in rekordbox. 
+
+## colors
+The default mixxx hotcue palette is taken from mixxx/src/util/color/predefinedcolorpalettes.cpp to convert it to rekordbox colorpalette. If your hotcues colors are different due to different skin usage then this is probably why
+
+
 
