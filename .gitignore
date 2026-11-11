@@ -2,3 +2,4 @@ __pycache__
 *.xml
 *.sqlite
 virtualenv
+.mixxx2rekordbox
