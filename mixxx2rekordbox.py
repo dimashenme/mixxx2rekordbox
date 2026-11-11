@@ -372,7 +372,16 @@ def main():
 
     is_playlist_mode = args.playlists is not None
     is_crate_mode = args.crates is not None
-    if is_playlist_mode:
+
+    if is_playlist_mode and is_crate_mode:
+        target_names = [p.strip() for p in config.get('default_playlists', '').split(',') if p.strip()]
+        target_names = target_names + [p.strip() for p in config.get('default_crates', '').split(',') if p.strip()]
+
+        if not target_names:
+            print("Error: No playlists specified via CLI or config.")
+            sys.exit(1)
+        collections, track_ids = get_collections(conn, include_names=target_names, mode='playlists,crates')
+    elif is_playlist_mode:
         target_names = args.playlists
         if not target_names:
             target_names = [p.strip() for p in config.get('default_playlists', '').split(',') if p.strip()]
